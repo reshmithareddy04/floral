@@ -1,0 +1,188 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background-color: #fdf6f0;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.hero .title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero .subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+/* Navigation */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #dcb6ff;
+}
+
+/* Product Section */
+.product-section {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.product-section h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #7f7fc2;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 50px;
+}
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: none;
+  z-index: 1000;
+}
+
+
+.product-grid div {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product-grid div:hover {
+  transform: translateY(-5px);
+}
+
+.product-grid img {
+  max-width: 100%;
+  max-height: 200px; /* Fix image height */
+  object-fit: cover; /* Ensure the image fits the frame */
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Cart Section */
+.cart-section {
+  background: #ffeff5;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.cart-section h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #d63384;
+}
+
+/* Button */
+button {
+  background: #7f7fc2; /* Light lavender color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #c24cc2; /* Slightly darker lavender for hover effect */
+}
+
+/* Footer */
+footer {
+  background: #4a4a4a;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #ffb6c1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero .title {
+    font-size: 2.5rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+
+  .product-grid {
+    padding: 0 20px;
+  }
+}
